@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREX PRO 1 | Reloj de Lujo Deportivo Profesional — Precisión Suiza</title>
+    <meta name="description" content="AUREX PRO 1: reloj de lujo deportivo profesional. Caja de titanio grado 5, cristal de zafiro, resistencia 200M, mecanismo automático calibre AX-01. Envío gratuito y garantía de 5 años.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negro: #0a0a0a;
+            --gris-oscuro: #1a1a1a;
+            --gris-medio: #2a2a2a;
+            --gris-texto: #888888;
+            --plata: #c0c0c0;
+            --plata-claro: #e8e8e8;
+            --acento: #00d4a6;
+            --acento-hover: #00b894;
+            --blanco: #ffffff;
+            --borde: rgba(255,255,255,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--negro);
+            color: var(--plata-claro);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ═══════════════════════════════════════
+           NAVBAR
+        ═══════════════════════════════════════ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .navbar .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: var(--blanco);
+            text-transform: uppercase;
+        }
+
+        .navbar .logo span {
+            color: var(--acento);
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .navbar .nav-links a {
+            color: var(--gris-texto);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: var(--blanco);
+        }
+
+        /* ═══════════════════════════════════════
+           HERO
+        ═══════════════════════════════════════ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(ellipse at center top, rgba(0,212,166,0.06) 0%, transparent 60%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,212,166,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid var(--acento);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--acento);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--blanco);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--acento);
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--gris-texto);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-bullets {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-bullets .bullet {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--plata);
+        }
+
+        .hero-bullets .bullet::before {
+            content: '✓';
+            color: var(--acento);
+            font-weight: 700;
+        }
+
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            background: var(--acento);
+            color: var(--negro);
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: var(--acento-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0,212,166,0.3);
+        }
+
+        .btn-secondary {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--blanco);
+            border: 1px solid var(--borde);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--plata);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Mini cards confianza */
+        .trust-cards {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-card {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1.4rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--gris-texto);
+        }
+
+        .trust-card .icon {
+            font-size: 1.2rem;
+        }
+
+        /* ═══════════════════════════════════════
+           SECCIONES GENERALES
+        ═══════════════════════════════════════ */
+        section {
+            padding: 6rem 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--acento);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--blanco);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-desc {
+            color: var(--gris-texto);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+
+        /* ═══════════════════════════════════════
+           VALUE PROPS
+        ═══════════════════════════════════════ */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: var(--gris-oscuro);
+            border: 1px solid var(--borde);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            border-color: rgba(0,212,166,0.3);
+            transform: translateY(-4px);
+        }
+
+        .value-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
+
+        /* ═══════════════════════════════════════
+           ESPECIFICACIONES
+        ═══════════════════════════════════════ */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+            background: var(--gris-oscuro);
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            transition: border-color 0.3s;
+        }
+
+        .spec-item:hover {
+            border-color: rgba(0,212,166,0.2);
+        }
+
+        .spec-item .spec-label {
+            font-size: 0.8rem;
+            color: var(--gris-texto);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .spec-item .spec-value {
+            font-size: 0.95rem;
+            color: var(--blanco);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* ═══════════════════════════════════════
+           GALERÍA
+        ═══════════════════════════════════════ */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--gris-oscuro);
+            border: 1px solid var(--borde);
+        }
+
+        .gallery-item .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, var(--gris-oscuro) 0%, var(--gris-medio) 100%);
+        }
+
+        .gallery-item .placeholder .icon {
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .gallery-item .placeholder .text {
+            font-size: 0.85rem;
+            color: var(--gris-texto);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 60px rgba(0,212,166,0.15));
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.2rem 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            font-size: 0.85rem;
+            color: var(--plata);
+        }
+
+        /* ═══════════════════════════════════════
+           HISTORIA
+        ═══════════════════════════════════════ */
+        .story-section {
+            background: var(--gris-oscuro);
+            border-radius: 24px;
+            padding: 4rem;
+            border: 1px solid var(--borde);
+            text-align: center;
+        }
+
+        .story-section .story-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--plata);
+            max-width: 750px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .story-section .story-text strong {
+            color: var(--blanco);
+            font-weight: 600;
+        }
+
+        /* ═══════════════════════════════════════
+           COMPARADOR
+        ═══════════════════════════════════════ */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .compare-card {
+            background: var(--gris-oscuro);
+            border: 1px solid var(--borde);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .compare-card.before {
+            opacity: 0.6;
+        }
+
+        .compare-card.after {
+            border-color: rgba(0,212,166,0.3);
+        }
+
+        .compare-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .compare-card.before h3 {
+            color: var(--gris-texto);
+        }
+
+        .compare-card.after h3 {
+            color: var(--acento);
+        }
+
+        .compare-card ul {
+            list-style: none;
+        }
+
+        .compare-card ul li {
+            padding: 0.6rem 0;
+            font-size: 0.9rem;
+            color: var(--plata);
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .compare-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .compare-card ul li::before {
+            content: '→ ';
+            color: var(--acento);
+        }
+
+        .compare-card.before ul li::before {
+            content: '✗ ';
+            color: #666;
+        }
+
+        /* ═══════════════════════════════════════
+           PRUEBA SOCIAL
+        ═══════════════════════════════════════ */
+        .social-proof {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .proof-card {
+            background: var(--gris-oscuro);
+            border: 1px solid var(--borde);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .proof-card .stars {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 0.8rem;
+            letter-spacing: 3px;
+        }
+
+        .proof-card .proof-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 0.5rem;
+        }
+
+        .proof-card .proof-text {
+            font-size: 0.85rem;
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
+
+        .proof-card .proof-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .confidence-note {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--gris-texto);
+            font-style: italic;
+        }
+
+        /* ═══════════════════════════════════════
+           FAQ
+        ═══════════════════════════════════════ */
+        .faq-list {
+            max-width: 800px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            color: var(--blanco);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--acento);
+        }
+
+        .faq-question .toggle {
+            font-size: 1.3rem;
+            color: var(--gris-texto);
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 300px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--gris-texto);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ═══════════════════════════════════════
+           CTA FINAL
+        ═══════════════════════════════════════ */
+        .final-cta {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: radial-gradient(ellipse at center, rgba(0,212,166,0.08) 0%, transparent 60%);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--blanco);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--gris-texto);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .final-cta .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--acento);
+            margin-bottom: 2rem;
+        }
+
+        .legal-note {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        /* ═══════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════ */
+        footer {
+            padding: 3rem;
+            text-align: center;
+            border-top: 1px solid var(--borde);
+        }
+
+        footer .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: var(--blanco);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-logo span {
+            color: var(--acento);
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════ */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 1.5rem;
+            }
+
+            .navbar .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .hero-bullets {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compare-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-proof {
+                grid-template-columns: 1fr;
+            }
+
+            .story-section {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════ -->
+    <nav class="navbar">
+        <div class="logo">AUREX<span>·</span>PRO</div>
+        <ul class="nav-links">
+            <li><a href="#valor">Valor</a></li>
+            <li><a href="#specs">Especificaciones</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+         1) HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">Nueva Colección 2026</div>
+            <h1>Precisión que no se detiene. <span>Ni tú.</span></h1>
+            <div class="hero-image">
+                <img src="assets/endurance-pro-main.webp" alt="AUREX PRO 1 — Vista principal">
+            </div>
+            <p class="subtitle">
+                El reloj diseñado para quienes exigen más: rendimiento profesional, materiales de grado aeroespacial y una estética que impone respeto en cualquier situación.
+            </p>
+
+            <div class="hero-bullets">
+                <span class="bullet">Certificación cronómetro COSC</span>
+                <span class="bullet">Titanio grado 5 ultrarresistente</span>
+                <span class="bullet">Diseño versátil para cada día</span>
+            </div>
+
+            <div class="hero-ctas">
+                <a href="#comprar" class="btn-primary">Comprar ahora</a>
+                <a href="#valor" class="btn-secondary">Descubrir más</a>
+            </div>
+
+            <div class="trust-cards">
+                <div class="trust-card">
+                    <span class="icon">🚚</span>
+                    <span>Envío gratuito 24/48h</span>
+                </div>
+                <div class="trust-card">
+                    <span class="icon">↩️</span>
+                    <span>Devolución 30 días</span>
+                </div>
+                <div class="trust-card">
+                    <span class="icon">🛡️</span>
+                    <span>Garantía 5 años</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         2) POR QUÉ DESTACA
+    ═══════════════════════════════════════ -->
+    <section id="valor">
+        <div class="section-label">⚙️ Por qué destaca</div>
+        <h2 class="section-title">Ingeniería al servicio de tu ambición</h2>
+        <p class="section-desc">
+            Cada componente del AUREX PRO 1 ha sido diseñado para superar los estándares más exigentes. Esto es lo que lo diferencia.
+        </p>
+
+        <div class="value-grid">
+            <div class="value-card">
+                <div class="icon">⏱️</div>
+                <h3>Cronómetro certificado</h3>
+                <p>Mecanismo automático con certificación COSC. Precisión de -4/+6 segundos al día, comparable a instrumentos de aviación.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">💎</div>
+                <h3>Cristal de zafiro</h3>
+                <p>Zafiro antirreflejo con doble tratamiento. Prácticamente imposible de rayar, máxima legibilidad bajo cualquier luz.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">🔩</div>
+                <h3>Titanio grado 5</h3>
+                <p>Caja de titanio aeroespacial: 40% más ligera que acero, hipoalergénica y resistente a la corrosión extrema.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">🌊</div>
+                <h3>200M de resistencia</h3>
+                <p>Válvares de helio y junta triple. Diseñado para buceo profesional y condiciones extremas.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">🔋</div>
+                <h3>Reserva de 70 horas</h3>
+                <p>Autonomía de casi 3 días sin llevarlo puesto. Precisión constante hasta el último minuto.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">🎨</div>
+                <h3>Diseño atemporal</h3>
+                <p>Estética depurada que transiciona del boardroom a la aventura sin perder un ápice de elegancia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         3) ESPECIFICACIONES
+    ═══════════════════════════════════════ -->
+    <section id="specs">
+        <div class="section-label">📌 Especificaciones clave</div>
+        <h2 class="section-title">Ficha técnica</h2>
+        <p class="section-desc">
+            Datos que importan, presentados sin jerga innecesaria. Todo lo que necesitas saber antes de decidir.
+        </p>
+
+        <div class="specs-grid">
+            <div class="spec-item">
+                <span class="spec-label">Material de caja</span>
+                <span class="spec-value">Titanio grado 5</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Diámetro</span>
+                <span class="spec-value">42 mm</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Cristal</span>
+                <span class="spec-value">Zafiro antirreflejo</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Mecanismo</span>
+                <span class="spec-value">Automático AX-01</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Resistencia al agua</span>
+                <span class="spec-value">200M / 20 ATM</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Reserva de marcha</span>
+                <span class="spec-value">70 horas</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Brazalete</span>
+                <span class="spec-value">Caucho FVM + deployant</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Peso</span>
+                <span class="spec-value">89 g (sin brazalete)</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Certificación</span>
+                <span class="spec-value">Cronómetro COSC</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Garantía</span>
+                <span class="spec-value">5 años internacional</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         4) GALERÍA
+    ═══════════════════════════════════════ -->
+    <section id="galeria">
+        <div class="section-label">🖼️ Galería</div>
+        <h2 class="section-title">Cada detalle cuenta una historia</h2>
+        <p class="section-desc">
+            Explora el AUREX PRO 1 desde cada ángulo. Diseño, funcionalidad y presencia en una sola pieza.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/endurance-pro-main.webp" alt="AUREX PRO 1 — Vista frontal">
+                <div class="caption">Esfera azul profundo con índices aplicados y correa de caucho</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/endurance-pro-three-quarter.webp" alt="AUREX PRO 1 — Vista tres cuartos">
+                <div class="caption">Caja Breitlight® de 44 mm: ligereza y resistencia extrema</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/endurance-pro-soldier.webp" alt="AUREX PRO 1 — Detalle">
+                <div class="caption">Cronógrafo SuperQuartz™ con certificación COSC</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/endurance-pro-main.webp" alt="AUREX PRO 1 — En muñeca">
+                <div class="caption">Ajuste ergonómico: comodidad absoluta durante 24 horas</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         5) HISTORIA DE RENDIMIENTO
+    ═══════════════════════════════════════ -->
+    <section id="historia">
+        <div class="story-section">
+            <div class="section-label">🏁 Historia de rendimiento</div>
+            <p class="story-text">
+                Nació en los talleres de Ginebra con una pregunta incómoda: <strong>¿por qué un reloj profesional debe sacrificar elegancia?</strong> El AUREX PRO 1 responde con titanio grado 5, un calibre que no perdona y una estética que no pide permiso. Diseñado para quienes miden su vida en logros, no en excusas. Desde la cima de una montaña hasta la sala de juntas más exigente, este reloj no es un accesorio. <strong>Es una declaración de intenciones.</strong> Cada componente ha sido probado en condiciones extremas: temperaturas de -40°C a +60°C, presiones de 20 ATM y vibraciones que destruirían mecanismos convencionales. El resultado: un instrumento que te acompaña cuando más lo necesitas, sin pedir nada a cambio.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         6) COMPARADOR
+    ═══════════════════════════════════════ -->
+    <section id="comparador">
+        <div class="section-label">⚖️ Antes vs Ahora</div>
+        <h2 class="section-title">La diferencia se siente en la muñeca</h2>
+        <p class="section-desc">
+            Compara lo que tenías con lo que mereces. Tres razones que cambian la experiencia.
+        </p>
+
+        <div class="compare-grid">
+            <div class="compare-card before">
+                <h3>Reloj convencional</h3>
+                <ul>
+                    <li>Caja de acero: pesada y propensa a arañazos</li>
+                    <li>Resistencia 50M: limitación real en actividades acuáticas</li>
+                    <li>Reserva de 40h: necesita cuerda diaria</li>
+                    <li>Diseño genérico: no destaca en ningún entorno</li>
+                </ul>
+            </div>
+            <div class="compare-card after">
+                <h3>AUREX PRO 1</h3>
+                <ul>
+                    <li>Titanio grado 5: ligereza y resistencia extrema</li>
+                    <li>200M + válvula de helio: buceo profesional real</li>
+                    <li>70h de reserva: olvídate de dar cuerda</li>
+                    <li>Diseño distintivo: presencia en cualquier situación</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         7) PRUEBA SOCIAL
+    ═══════════════════════════════════════ -->
+    <section id="prueba-social">
+        <div class="section-label">⭐ Prueba social y confianza</div>
+        <h2 class="section-title">La confianza se gana, no se promete</h2>
+        <p class="section-desc">
+            Miles de profesionales ya confían en AUREX. Esto es lo que dicen y lo que te garantizamos.
+        </p>
+
+        <div class="social-proof">
+            <div class="proof-card">
+                <div class="stars">★★★★★</div>
+                <div class="proof-title">4.9 / 5 — 2,847 reseñas</div>
+                <div class="proof-text">
+                    "La precisión es absurda. Lo llevo 6 meses y no se ha desviado ni un segundo." — Carlos M., Triatleta profesional
+                </div>
+            </div>
+            <div class="proof-card">
+                <div class="proof-icon">🛡️</div>
+                <div class="proof-title">Garantía 5 años</div>
+                <div class="proof-text">
+                    Cobertura completa incluyendo mecanismo, caja y brazalete. Sin letra pequeña, sin sorpresas.
+                </div>
+            </div>
+            <div class="proof-card">
+                <div class="proof-icon">🚚</div>
+                <div class="proof-title">Envío 24/48h</div>
+                <div class="proof-text">
+                    Entrega asegurada con seguimiento en tiempo real. Gratis en pedidos superiores a 500€.
+                </div>
+            </div>
+        </div>
+
+        <p class="confidence-note">
+            "Más del 94% de nuestros clientes recomendaría AUREX a un colega o amigo."
+        </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         8) FAQ
+    ═══════════════════════════════════════ -->
+    <section id="faq">
+        <div class="section-label">❓ Preguntas frecuentes</div>
+        <h2 class="section-title">Resolvemos tus dudas</h2>
+        <p class="section-desc">
+            Todo lo que necesitas saber antes de tu compra. Si no encuentras tu respuesta, escríbenos.
+        </p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Es realmente resistente al agua?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sí. El AUREX PRO 1 tiene una resistencia de 200 metros (20 ATM) con válvula de helio integrada. Es apto para buceo recreativo y profesional. La corona roscada y las juntas triples garantizan un sellado perfecto en cualquier condición.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué incluye la garantía de 5 años?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cobertura completa del mecanismo, caja, brazalete y cristal. Incluye reparaciones por defectos de fabricación, ajuste de precisión y reemplazo de componentes. Válida internacionalmente en cualquier servicio técnico autorizado AUREX.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cómo elijo mi talla de brazalete?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>El AUREX PRO 1 incluye dos segmentos de brazalete intercambiables (S/M y L) para muñecas de 15 a 21 cm. Si necesitas un tamaño especial, contacta con nosotros y te enviaremos el segmento adecuado sin coste adicional.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cómo debo cuidar mi reloj?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Enjuaga con agua dulce tras contacto con sal o cloro. Evita golpes fuertes contra superficies duras. Recomendamos un servicio completo cada 3-5 años para mantener la precisión óptima. El titanio no requiere pulido como el acero.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cuánto tarda el envío?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Envío en 24-48h laborables para España peninsular. Baleares y Canarias: 3-5 días. Todos los envíos incluyen seguro completo y seguimiento en tiempo real. Envío gratuito en pedidos superiores a 500€.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Puedo devolver el reloj si no me convence?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Por supuesto. Tienes 30 días naturales desde la recepción para devolver el reloj en condiciones originales. Te reembolsamos el importe completo en un plazo máximo de 5-7 días laborables.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿El mecanismo necesita mantenimiento especial?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>El calibre AX-01 está diseñado para un mantenimiento mínimo. Recomendamos un servicio cada 3-5 años para reemplazar juntas y lubricar el mecanismo. La reserva de 70h garantiza que el reloj siga funcionando aunque no lo lleves puesto un fin de semana.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Puedo usarlo para deportes de impacto?
+                    <span class="toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>El titanio grado 5 absorbe mejor los golpes que el acero, y el zafiro es prácticamente irrompible. Sin embargo, para deportes de alto impacto (motociclismo, escalada extrema), recomendamos retirar el reloj para preservar el mecanismo de precisión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         9) CTA FINAL
+    ═══════════════════════════════════════ -->
+    <section class="final-cta" id="comprar">
+        <h2>Tu próximo nivel empieza aquí</h2>
+        <p>
+            No compras un reloj. Inviertes en un instrumento que te acompañará en cada desafío, en cada logro, en cada momento que defina quién eres. El AUREX PRO 1 no es para todos. Es para quienes lo dan todo.
+        </p>
+        <div class="price">2.890 €</div>
+        <a href="#" class="btn-primary">Comprar ahora</a>
+        <p class="legal-note">Los precios y disponibilidad pueden variar. IVA incluido. Envío gratuito península.</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer>
+        <div class="footer-logo">AUREX<span>·</span>PRO</div>
+        <p>© 2026 AUREX Watches. Todos los derechos reservados. | Aviso legal | Privacidad | Cookies</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const toggle = button.querySelector('.toggle');
+                
+                // Cerrar todos
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+                document.querySelectorAll('.faq-question .toggle').forEach(t => t.textContent = '+');
+                
+                // Abrir el clicado
+                if (!answer.classList.contains('active')) {
+                    answer.classList.add('active');
+                    toggle.textContent = '−';
+                }
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
