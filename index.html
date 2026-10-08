@@ -1,1152 +1,1039 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUREX PRO 1 | Reloj de Lujo Deportivo Profesional — Precisión Suiza</title>
-    <meta name="description" content="AUREX PRO 1: reloj de lujo deportivo profesional. Caja de titanio grado 5, cristal de zafiro, resistencia 200M, mecanismo automático calibre AX-01. Envío gratuito y garantía de 5 años.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --negro: #0a0a0a;
-            --gris-oscuro: #1a1a1a;
-            --gris-medio: #2a2a2a;
-            --gris-texto: #888888;
-            --plata: #c0c0c0;
-            --plata-claro: #e8e8e8;
-            --acento: #00d4a6;
-            --acento-hover: #00b894;
-            --blanco: #ffffff;
-            --borde: rgba(255,255,255,0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--negro);
-            color: var(--plata-claro);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ═══════════════════════════════════════
-           NAVBAR
-        ═══════════════════════════════════════ */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.2rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10,10,10,0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--borde);
-        }
-
-        .navbar .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
-            letter-spacing: 4px;
-            color: var(--blanco);
-            text-transform: uppercase;
-        }
-
-        .navbar .logo span {
-            color: var(--acento);
-        }
-
-        .navbar .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .navbar .nav-links a {
-            color: var(--gris-texto);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
-        .navbar .nav-links a:hover {
-            color: var(--blanco);
-        }
-
-        /* ═══════════════════════════════════════
-           HERO
-        ═══════════════════════════════════════ */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 8rem 2rem 4rem;
-            position: relative;
-            background: radial-gradient(ellipse at center top, rgba(0,212,166,0.06) 0%, transparent 60%);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0,212,166,0.04) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero .badge {
-            display: inline-block;
-            padding: 0.4rem 1.2rem;
-            border: 1px solid var(--acento);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--acento);
-            margin-bottom: 2rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            color: var(--blanco);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 span {
-            color: var(--acento);
-        }
-
-        .hero .subtitle {
-            font-size: 1.15rem;
-            color: var(--gris-texto);
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.7;
-        }
-
-        .hero-bullets {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-bullets .bullet {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--plata);
-        }
-
-        .hero-bullets .bullet::before {
-            content: '✓';
-            color: var(--acento);
-            font-weight: 700;
-        }
-
-        .hero-ctas {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            padding: 1rem 2.5rem;
-            background: var(--acento);
-            color: var(--negro);
-            border: none;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            background: var(--acento-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(0,212,166,0.3);
-        }
-
-        .btn-secondary {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: var(--blanco);
-            border: 1px solid var(--borde);
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--plata);
-            background: rgba(255,255,255,0.05);
-        }
-
-        /* Mini cards confianza */
-        .trust-cards {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .trust-card {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 0.8rem 1.4rem;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--borde);
-            border-radius: 12px;
-            font-size: 0.8rem;
-            color: var(--gris-texto);
-        }
-
-        .trust-card .icon {
-            font-size: 1.2rem;
-        }
-
-        /* ═══════════════════════════════════════
-           SECCIONES GENERALES
-        ═══════════════════════════════════════ */
-        section {
-            padding: 6rem 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--acento);
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            font-weight: 800;
-            color: var(--blanco);
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-        }
-
-        .section-desc {
-            color: var(--gris-texto);
-            max-width: 600px;
-            margin-bottom: 3rem;
-            font-size: 1.05rem;
-        }
-
-        /* ═══════════════════════════════════════
-           VALUE PROPS
-        ═══════════════════════════════════════ */
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .value-card {
-            background: var(--gris-oscuro);
-            border: 1px solid var(--borde);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s;
-        }
-
-        .value-card:hover {
-            border-color: rgba(0,212,166,0.3);
-            transform: translateY(-4px);
-        }
-
-        .value-card .icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--blanco);
-            margin-bottom: 0.5rem;
-        }
-
-        .value-card p {
-            font-size: 0.9rem;
-            color: var(--gris-texto);
-            line-height: 1.6;
-        }
-
-        /* ═══════════════════════════════════════
-           ESPECIFICACIONES
-        ═══════════════════════════════════════ */
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 1.5rem;
-            background: var(--gris-oscuro);
-            border: 1px solid var(--borde);
-            border-radius: 12px;
-            transition: border-color 0.3s;
-        }
-
-        .spec-item:hover {
-            border-color: rgba(0,212,166,0.2);
-        }
-
-        .spec-item .spec-label {
-            font-size: 0.8rem;
-            color: var(--gris-texto);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .spec-item .spec-value {
-            font-size: 0.95rem;
-            color: var(--blanco);
-            font-weight: 600;
-            text-align: right;
-        }
-
-        /* ═══════════════════════════════════════
-           GALERÍA
-        ═══════════════════════════════════════ */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            background: var(--gris-oscuro);
-            border: 1px solid var(--borde);
-        }
-
-        .gallery-item .placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            background: linear-gradient(135deg, var(--gris-oscuro) 0%, var(--gris-medio) 100%);
-        }
-
-        .gallery-item .placeholder .icon {
-            font-size: 3rem;
-            opacity: 0.3;
-        }
-
-        .gallery-item .placeholder .text {
-            font-size: 0.85rem;
-            color: var(--gris-texto);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 20px 60px rgba(0,212,166,0.15));
-        }
-
-        .gallery-item .caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1.2rem 1.5rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            font-size: 0.85rem;
-            color: var(--plata);
-        }
-
-        /* ═══════════════════════════════════════
-           HISTORIA
-        ═══════════════════════════════════════ */
-        .story-section {
-            background: var(--gris-oscuro);
-            border-radius: 24px;
-            padding: 4rem;
-            border: 1px solid var(--borde);
-            text-align: center;
-        }
-
-        .story-section .story-text {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: var(--plata);
-            max-width: 750px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-        .story-section .story-text strong {
-            color: var(--blanco);
-            font-weight: 600;
-        }
-
-        /* ═══════════════════════════════════════
-           COMPARADOR
-        ═══════════════════════════════════════ */
-        .compare-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .compare-card {
-            background: var(--gris-oscuro);
-            border: 1px solid var(--borde);
-            border-radius: 16px;
-            padding: 2rem;
-        }
-
-        .compare-card.before {
-            opacity: 0.6;
-        }
-
-        .compare-card.after {
-            border-color: rgba(0,212,166,0.3);
-        }
-
-        .compare-card h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .compare-card.before h3 {
-            color: var(--gris-texto);
-        }
-
-        .compare-card.after h3 {
-            color: var(--acento);
-        }
-
-        .compare-card ul {
-            list-style: none;
-        }
-
-        .compare-card ul li {
-            padding: 0.6rem 0;
-            font-size: 0.9rem;
-            color: var(--plata);
-            border-bottom: 1px solid var(--borde);
-        }
-
-        .compare-card ul li:last-child {
-            border-bottom: none;
-        }
-
-        .compare-card ul li::before {
-            content: '→ ';
-            color: var(--acento);
-        }
-
-        .compare-card.before ul li::before {
-            content: '✗ ';
-            color: #666;
-        }
-
-        /* ═══════════════════════════════════════
-           PRUEBA SOCIAL
-        ═══════════════════════════════════════ */
-        .social-proof {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .proof-card {
-            background: var(--gris-oscuro);
-            border: 1px solid var(--borde);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .proof-card .stars {
-            font-size: 1.3rem;
-            color: #ffd700;
-            margin-bottom: 0.8rem;
-            letter-spacing: 3px;
-        }
-
-        .proof-card .proof-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--blanco);
-            margin-bottom: 0.5rem;
-        }
-
-        .proof-card .proof-text {
-            font-size: 0.85rem;
-            color: var(--gris-texto);
-            line-height: 1.6;
-        }
-
-        .proof-card .proof-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .confidence-note {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.85rem;
-            color: var(--gris-texto);
-            font-style: italic;
-        }
-
-        /* ═══════════════════════════════════════
-           FAQ
-        ═══════════════════════════════════════ */
-        .faq-list {
-            max-width: 800px;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--borde);
-        }
-
-        .faq-question {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            background: none;
-            border: none;
-            color: var(--blanco);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-align: left;
-            font-family: inherit;
-            transition: color 0.3s;
-        }
-
-        .faq-question:hover {
-            color: var(--acento);
-        }
-
-        .faq-question .toggle {
-            font-size: 1.3rem;
-            color: var(--gris-texto);
-            transition: transform 0.3s;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-
-        .faq-answer.active {
-            max-height: 300px;
-            padding-bottom: 1.5rem;
-        }
-
-        .faq-answer p {
-            color: var(--gris-texto);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
-        /* ═══════════════════════════════════════
-           CTA FINAL
-        ═══════════════════════════════════════ */
-        .final-cta {
-            text-align: center;
-            padding: 8rem 2rem;
-            background: radial-gradient(ellipse at center, rgba(0,212,166,0.08) 0%, transparent 60%);
-        }
-
-        .final-cta h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 900;
-            color: var(--blanco);
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-        }
-
-        .final-cta p {
-            font-size: 1.1rem;
-            color: var(--gris-texto);
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.8;
-        }
-
-        .final-cta .price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--acento);
-            margin-bottom: 2rem;
-        }
-
-        .legal-note {
-            margin-top: 2rem;
-            font-size: 0.75rem;
-            color: #555;
-        }
-
-        /* ═══════════════════════════════════════
-           FOOTER
-        ═══════════════════════════════════════ */
-        footer {
-            padding: 3rem;
-            text-align: center;
-            border-top: 1px solid var(--borde);
-        }
-
-        footer .footer-logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            letter-spacing: 4px;
-            color: var(--blanco);
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        footer .footer-logo span {
-            color: var(--acento);
-        }
-
-        footer p {
-            font-size: 0.8rem;
-            color: #555;
-        }
-
-        /* ═══════════════════════════════════════
-           RESPONSIVE
-        ═══════════════════════════════════════ */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 1rem 1.5rem;
-            }
-
-            .navbar .nav-links {
-                display: none;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .hero {
-                padding: 6rem 1.5rem 3rem;
-            }
-
-            .hero-bullets {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.8rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .compare-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-proof {
-                grid-template-columns: 1fr;
-            }
-
-            .story-section {
-                padding: 2.5rem 1.5rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ander Salazar · Técnico en Informática y Comunicaciones</title>
+<meta name="description" content="CV y portfolio de Ander Salazar, Técnico en Informática y Comunicaciones. Montaje, redes, sistemas operativos y proyectos web.">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Tipografía limpia y moderna -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     VARIABLES GLOBALES — cambia aquí colores, medidas y ritmo
+     ============================================================ */
+  :root {
+    --bg:            #ffffff;              /* fondo principal */
+    --bg-alt:        #f7f8fa;              /* fondo de secciones alternas */
+    --surface:       #ffffff;              /* tarjetas */
+    --surface-hover: #f2f4f7;
+    --border:        rgba(12, 18, 28, .10);
+
+    --text:          #10151d;              /* texto principal */
+    --text-muted:    #5d6a7d;              /* texto secundario */
+
+    --accent:        #e02b20;              /* rojo de acento */
+    --accent-dark:   #b81f16;              /* rojo para hover */
+    --accent-soft:   rgba(224, 43, 32, .10);
+    --accent-line:   rgba(224, 43, 32, .35);
+    --accent-glow:   rgba(224, 43, 32, .22);
+
+    --radius:        16px;
+    --radius-sm:     10px;
+    --max-width:     1180px;
+    --section-pad:   clamp(72px, 10vw, 128px);
+
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* ============================================================
+     BASE
+     ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  img, svg { max-width: 100%; display: block; }
+
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Foco visible para navegación con teclado */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Etiqueta pequeña en mayúsculas sobre los títulos de sección */
+  .eyebrow {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3.6vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    color: var(--text-muted);
+    max-width: 620px;
+    font-size: 1.02rem;
+  }
+
+  section { padding: var(--section-pad) 0; position: relative; }
+
+  /* ============================================================
+     BOTONES
+     ============================================================ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: .95rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform .25s ease, background .25s ease,
+                box-shadow .25s ease, border-color .25s ease, color .25s ease;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 0 rgba(224, 43, 32, 0);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -8px var(--accent-glow);
+    background: var(--accent-dark);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: rgba(12, 18, 28, .18);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /* ============================================================
+     1. CABECERA / HERO
+     ============================================================ */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+  }
+
+  /* Resplandor coral difuso de fondo */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 68%);
+    opacity: .8;
+    filter: blur(40px);
+    pointer-events: none;
+  }
+
+  /* Retícula técnica sutil */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(12,18,28,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(12,18,28,.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 20%, transparent 75%);
+    pointer-events: none;
+  }
+
+  .hero .container { position: relative; z-index: 1; }
+
+  .hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 16px 7px 12px;
+    border: 1px solid var(--border);
+    background: rgba(12, 18, 28, .03);
+    border-radius: 999px;
+    font-size: .82rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+  .hero-status .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #3ddc84;
+    box-shadow: 0 0 0 4px rgba(61, 220, 132, .16);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(61, 220, 132, .16); }
+    50%      { box-shadow: 0 0 0 7px rgba(61, 220, 132, .06); }
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    font-weight: 700;
+    line-height: 1.03;
+    letter-spacing: -.035em;
+    margin-bottom: 22px;
+    max-width: 15ch;
+  }
+
+  .hero h1 .accent { color: var(--accent); }
+
+  .hero-role {
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .hero-study {
+    font-size: .95rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+
+  .hero-text {
+    max-width: 58ch;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 56px;
+  }
+
+  /* Franja de datos rápidos bajo los botones */
+  .hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .fact-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+  .fact-label {
+    font-size: .82rem;
+    color: var(--text-muted);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     2. COMPETENCIAS TÉCNICAS
+     ============================================================ */
+  .skills { background: var(--bg-alt); border-top: 1px solid var(--border); }
+
+  .skills-head { margin-bottom: 56px; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 22px;
+  }
+
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 34px 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(12, 18, 28, .05);
+    transition: transform .3s ease, border-color .3s ease,
+                background .3s ease, box-shadow .3s ease;
+  }
+
+  /* Línea roja superior que se despliega al pasar el ratón */
+  .skill-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 2px; width: 0;
+    background: var(--accent);
+    transition: width .4s ease;
+  }
+  .skill-card:hover::before { width: 100%; }
+
+  .skill-card:hover {
+    transform: translateY(-6px);
+    background: var(--surface-hover);
+    border-color: var(--accent-line);
+    box-shadow: 0 20px 44px -20px rgba(12, 18, 28, .28);
+  }
+
+  .skill-icon {
+    width: 54px; height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    margin-bottom: 24px;
+    transition: background .3s ease, transform .3s ease;
+  }
+  .skill-card:hover .skill-icon {
+    background: rgba(224, 43, 32, .16);
+    transform: scale(1.06);
+  }
+  .skill-icon svg { width: 26px; height: 26px; stroke: var(--accent); }
+
+  .skill-card h3 {
+    font-size: 1.06rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    letter-spacing: -.01em;
+  }
+
+  .skill-card p {
+    font-size: .92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ============================================================
+     3. PORTFOLIO
+     ============================================================ */
+  .portfolio-head { margin-bottom: 56px; }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 26px;
+  }
+
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 2px rgba(12, 18, 28, .05);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-line);
+    box-shadow: 0 24px 50px -24px rgba(12, 18, 28, .30);
+  }
+
+  /* Miniatura del proyecto (SVG en línea: no pide recursos externos) */
+  .project-thumb {
+    aspect-ratio: 16 / 9;
+    background:
+      linear-gradient(135deg, rgba(224,43,32,.16) 0%, transparent 55%),
+      linear-gradient(160deg, #1a2230 0%, #0d1219 100%);
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .project-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .project-thumb svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: transform .5s ease;
+  }
+  .project-card:hover .project-thumb svg { transform: scale(1.04); }
+
+  .project-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .project-body h3 {
+    font-size: 1.22rem;
+    font-weight: 600;
+    letter-spacing: -.015em;
+    margin-bottom: 10px;
+  }
+
+  .project-body p {
+    font-size: .93rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .tag {
+    font-size: .76rem;
+    font-weight: 500;
+    letter-spacing: .03em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid rgba(224, 43, 32, .25);
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+
+  .project-body .btn {
+    align-self: flex-start;
+    padding: 12px 24px;
+    font-size: .88rem;
+  }
+
+  /* Tarjeta fantasma para futuros proyectos */
+  .project-placeholder {
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 48px 32px;
+    color: var(--text-muted);
+    font-size: .9rem;
+    min-height: 320px;
+    transition: border-color .3s ease, color .3s ease;
+  }
+  .project-placeholder:hover { border-color: var(--accent-line); color: var(--text); }
+  .project-placeholder strong {
+    display: block;
+    font-size: 1.9rem;
+    color: var(--accent);
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  /* ============================================================
+     4. FORMULARIO DE CONTACTO
+     ============================================================ */
+  .contact {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .contact-intro p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 44ch;
+  }
+
+  .contact-list { display: flex; flex-direction: column; gap: 18px; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: .94rem;
+    color: var(--text-muted);
+  }
+  .contact-item .ico {
+    width: 38px; height: 38px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(224, 43, 32, .25);
+  }
+  .contact-item .ico svg { width: 17px; height: 17px; stroke: var(--accent); }
+  .contact-item strong { color: var(--text); font-weight: 500; }
+  .contact-item a:hover { color: var(--accent); }
+
+  .contact-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    box-shadow: 0 24px 48px -32px rgba(12, 18, 28, .35);
+  }
+
+  .field { display: flex; flex-direction: column; gap: 9px; }
+
+  .field label {
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 15px 17px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: .96rem;
+    transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder { color: #9aa5b4; }
+
+  .field input:focus,
+  .field textarea:focus {
+    border-color: var(--accent);
+    background: var(--bg);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+    outline: none;
+  }
+
+  .field textarea { resize: vertical; min-height: 140px; }
+
+  /* Mensaje que aparece tras enviar el formulario */
+  .form-note {
+    font-size: .88rem;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity .3s ease, transform .3s ease;
+    pointer-events: none;
+  }
+  .form-note.visible { opacity: 1; transform: translateY(0); }
+
+  /* ============================================================
+     5. FOOTER
+     ============================================================ */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 44px 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-brand { font-weight: 600; letter-spacing: -.01em; }
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: .9rem;
+    color: var(--text-muted);
+  }
+
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color .25s ease;
+  }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-links svg { width: 17px; height: 17px; }
+
+  /* ============================================================
+     ANIMACIÓN DE ENTRADA AL HACER SCROLL
+     ============================================================ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.2,.7,.3,1),
+                transform .7s cubic-bezier(.2,.7,.3,1);
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-facts { gap: 32px; }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    .hero { padding: 96px 0 64px; min-height: auto; }
+    .hero-actions .btn { width: 100%; justify-content: center; }
+    .hero-facts { gap: 26px; }
+    .fact-value { font-size: 1.3rem; }
+    .contact-form { padding: 28px 22px; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-links { flex-direction: column; gap: 14px; }
+  }
+
+  /* Respeta la preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .hero-status .dot { animation: none; }
+    * { animation: none !important; transition-duration: .01ms !important; }
+  }
+</style>
 </head>
+
 <body>
 
-    <!-- ═══════════════════════════════════════
-         NAVBAR
-    ═══════════════════════════════════════ -->
-    <nav class="navbar">
-        <div class="logo">AUREX<span>·</span>PRO</div>
-        <ul class="nav-links">
-            <li><a href="#valor">Valor</a></li>
-            <li><a href="#specs">Especificaciones</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-    </nav>
+<!-- ============================================================
+     1. CABECERA / HERO
+     ============================================================ -->
+<header class="hero" id="inicio">
+  <div class="container">
 
-    <!-- ═══════════════════════════════════════
-         1) HERO
-    ═══════════════════════════════════════ -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="badge">Nueva Colección 2026</div>
-            <h1>Precisión que no se detiene. <span>Ni tú.</span></h1>
-            <div class="hero-image">
-                <img src="assets/endurance-pro-main.webp" alt="AUREX PRO 1 — Vista principal">
-            </div>
-            <p class="subtitle">
-                El reloj diseñado para quienes exigen más: rendimiento profesional, materiales de grado aeroespacial y una estética que impone respeto en cualquier situación.
-            </p>
+    <div class="hero-status">
+      <span class="dot" aria-hidden="true"></span>
+      Disponible para incorporación
+    </div>
 
-            <div class="hero-bullets">
-                <span class="bullet">Certificación cronómetro COSC</span>
-                <span class="bullet">Titanio grado 5 ultrarresistente</span>
-                <span class="bullet">Diseño versátil para cada día</span>
-            </div>
+    <h1>Ander Salazar<br><span class="accent">Técnico en Informática</span></h1>
 
-            <div class="hero-ctas">
-                <a href="#comprar" class="btn-primary">Comprar ahora</a>
-                <a href="#valor" class="btn-secondary">Descubrir más</a>
-            </div>
+    <p class="hero-role">Técnico en Informática y Comunicaciones</p>
+    <p class="hero-study">Grado Básico en Somorrostro</p>
 
-            <div class="trust-cards">
-                <div class="trust-card">
-                    <span class="icon">🚚</span>
-                    <span>Envío gratuito 24/48h</span>
-                </div>
-                <div class="trust-card">
-                    <span class="icon">↩️</span>
-                    <span>Devolución 30 días</span>
-                </div>
-                <div class="trust-card">
-                    <span class="icon">🛡️</span>
-                    <span>Garantía 5 años</span>
-                </div>
-            </div>
+    <p class="hero-text">
+      Me formé en montaje de equipos, redes y sistemas operativos, y ahora aplico esa base
+      técnica a proyectos reales. Me interesa el trabajo bien hecho: diagnosticar, montar,
+      configurar y dejar todo funcionando. Busco un equipo donde seguir creciendo y aportar
+      desde el primer día.
+    </p>
+
+    <div class="hero-actions">
+      <!-- El enlace baja directamente al formulario de contacto -->
+      <a href="#contacto" class="btn btn-primary">
+        Solicitar entrevista
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </a>
+      <a href="#competencias" class="btn btn-ghost">Ver competencias</a>
+    </div>
+
+    <div class="hero-facts">
+      <div>
+        <div class="fact-value">4</div>
+        <div class="fact-label">Áreas técnicas</div>
+      </div>
+      <div>
+        <div class="fact-value">1</div>
+        <div class="fact-label">Proyecto publicado</div>
+      </div>
+      <div>
+        <div class="fact-value">100%</div>
+        <div class="fact-label">Presencial y remoto</div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ============================================================
+     2. COMPETENCIAS TÉCNICAS
+     ============================================================ -->
+<section class="skills" id="competencias">
+  <div class="container">
+
+    <div class="skills-head reveal">
+      <span class="eyebrow">Competencias</span>
+      <h2 class="section-title">Mis competencias técnicas</h2>
+      <p class="section-subtitle">
+        Las cuatro áreas que domino, desde el hardware hasta la puesta en marcha de un sistema.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- Tarjeta 1 -->
+      <article class="skill-card reveal">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+            <rect x="9" y="9" width="6" height="6"></rect>
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path>
+          </svg>
         </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         2) POR QUÉ DESTACA
-    ═══════════════════════════════════════ -->
-    <section id="valor">
-        <div class="section-label">⚙️ Por qué destaca</div>
-        <h2 class="section-title">Ingeniería al servicio de tu ambición</h2>
-        <p class="section-desc">
-            Cada componente del AUREX PRO 1 ha sido diseñado para superar los estándares más exigentes. Esto es lo que lo diferencia.
-        </p>
-
-        <div class="value-grid">
-            <div class="value-card">
-                <div class="icon">⏱️</div>
-                <h3>Cronómetro certificado</h3>
-                <p>Mecanismo automático con certificación COSC. Precisión de -4/+6 segundos al día, comparable a instrumentos de aviación.</p>
-            </div>
-            <div class="value-card">
-                <div class="icon">💎</div>
-                <h3>Cristal de zafiro</h3>
-                <p>Zafiro antirreflejo con doble tratamiento. Prácticamente imposible de rayar, máxima legibilidad bajo cualquier luz.</p>
-            </div>
-            <div class="value-card">
-                <div class="icon">🔩</div>
-                <h3>Titanio grado 5</h3>
-                <p>Caja de titanio aeroespacial: 40% más ligera que acero, hipoalergénica y resistente a la corrosión extrema.</p>
-            </div>
-            <div class="value-card">
-                <div class="icon">🌊</div>
-                <h3>200M de resistencia</h3>
-                <p>Válvares de helio y junta triple. Diseñado para buceo profesional y condiciones extremas.</p>
-            </div>
-            <div class="value-card">
-                <div class="icon">🔋</div>
-                <h3>Reserva de 70 horas</h3>
-                <p>Autonomía de casi 3 días sin llevarlo puesto. Precisión constante hasta el último minuto.</p>
-            </div>
-            <div class="value-card">
-                <div class="icon">🎨</div>
-                <h3>Diseño atemporal</h3>
-                <p>Estética depurada que transiciona del boardroom a la aventura sin perder un ápice de elegancia.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         3) ESPECIFICACIONES
-    ═══════════════════════════════════════ -->
-    <section id="specs">
-        <div class="section-label">📌 Especificaciones clave</div>
-        <h2 class="section-title">Ficha técnica</h2>
-        <p class="section-desc">
-            Datos que importan, presentados sin jerga innecesaria. Todo lo que necesitas saber antes de decidir.
-        </p>
-
-        <div class="specs-grid">
-            <div class="spec-item">
-                <span class="spec-label">Material de caja</span>
-                <span class="spec-value">Titanio grado 5</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Diámetro</span>
-                <span class="spec-value">42 mm</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Cristal</span>
-                <span class="spec-value">Zafiro antirreflejo</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Mecanismo</span>
-                <span class="spec-value">Automático AX-01</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Resistencia al agua</span>
-                <span class="spec-value">200M / 20 ATM</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Reserva de marcha</span>
-                <span class="spec-value">70 horas</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Brazalete</span>
-                <span class="spec-value">Caucho FVM + deployant</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Peso</span>
-                <span class="spec-value">89 g (sin brazalete)</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Certificación</span>
-                <span class="spec-value">Cronómetro COSC</span>
-            </div>
-            <div class="spec-item">
-                <span class="spec-label">Garantía</span>
-                <span class="spec-value">5 años internacional</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         4) GALERÍA
-    ═══════════════════════════════════════ -->
-    <section id="galeria">
-        <div class="section-label">🖼️ Galería</div>
-        <h2 class="section-title">Cada detalle cuenta una historia</h2>
-        <p class="section-desc">
-            Explora el AUREX PRO 1 desde cada ángulo. Diseño, funcionalidad y presencia en una sola pieza.
-        </p>
-
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/endurance-pro-main.webp" alt="AUREX PRO 1 — Vista frontal">
-                <div class="caption">Esfera azul profundo con índices aplicados y correa de caucho</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/endurance-pro-three-quarter.webp" alt="AUREX PRO 1 — Vista tres cuartos">
-                <div class="caption">Caja Breitlight® de 44 mm: ligereza y resistencia extrema</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/endurance-pro-soldier.webp" alt="AUREX PRO 1 — Detalle">
-                <div class="caption">Cronógrafo SuperQuartz™ con certificación COSC</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/endurance-pro-main.webp" alt="AUREX PRO 1 — En muñeca">
-                <div class="caption">Ajuste ergonómico: comodidad absoluta durante 24 horas</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         5) HISTORIA DE RENDIMIENTO
-    ═══════════════════════════════════════ -->
-    <section id="historia">
-        <div class="story-section">
-            <div class="section-label">🏁 Historia de rendimiento</div>
-            <p class="story-text">
-                Nació en los talleres de Ginebra con una pregunta incómoda: <strong>¿por qué un reloj profesional debe sacrificar elegancia?</strong> El AUREX PRO 1 responde con titanio grado 5, un calibre que no perdona y una estética que no pide permiso. Diseñado para quienes miden su vida en logros, no en excusas. Desde la cima de una montaña hasta la sala de juntas más exigente, este reloj no es un accesorio. <strong>Es una declaración de intenciones.</strong> Cada componente ha sido probado en condiciones extremas: temperaturas de -40°C a +60°C, presiones de 20 ATM y vibraciones que destruirían mecanismos convencionales. El resultado: un instrumento que te acompaña cuando más lo necesitas, sin pedir nada a cambio.
-            </p>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         6) COMPARADOR
-    ═══════════════════════════════════════ -->
-    <section id="comparador">
-        <div class="section-label">⚖️ Antes vs Ahora</div>
-        <h2 class="section-title">La diferencia se siente en la muñeca</h2>
-        <p class="section-desc">
-            Compara lo que tenías con lo que mereces. Tres razones que cambian la experiencia.
-        </p>
-
-        <div class="compare-grid">
-            <div class="compare-card before">
-                <h3>Reloj convencional</h3>
-                <ul>
-                    <li>Caja de acero: pesada y propensa a arañazos</li>
-                    <li>Resistencia 50M: limitación real en actividades acuáticas</li>
-                    <li>Reserva de 40h: necesita cuerda diaria</li>
-                    <li>Diseño genérico: no destaca en ningún entorno</li>
-                </ul>
-            </div>
-            <div class="compare-card after">
-                <h3>AUREX PRO 1</h3>
-                <ul>
-                    <li>Titanio grado 5: ligereza y resistencia extrema</li>
-                    <li>200M + válvula de helio: buceo profesional real</li>
-                    <li>70h de reserva: olvídate de dar cuerda</li>
-                    <li>Diseño distintivo: presencia en cualquier situación</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         7) PRUEBA SOCIAL
-    ═══════════════════════════════════════ -->
-    <section id="prueba-social">
-        <div class="section-label">⭐ Prueba social y confianza</div>
-        <h2 class="section-title">La confianza se gana, no se promete</h2>
-        <p class="section-desc">
-            Miles de profesionales ya confían en AUREX. Esto es lo que dicen y lo que te garantizamos.
-        </p>
-
-        <div class="social-proof">
-            <div class="proof-card">
-                <div class="stars">★★★★★</div>
-                <div class="proof-title">4.9 / 5 — 2,847 reseñas</div>
-                <div class="proof-text">
-                    "La precisión es absurda. Lo llevo 6 meses y no se ha desviado ni un segundo." — Carlos M., Triatleta profesional
-                </div>
-            </div>
-            <div class="proof-card">
-                <div class="proof-icon">🛡️</div>
-                <div class="proof-title">Garantía 5 años</div>
-                <div class="proof-text">
-                    Cobertura completa incluyendo mecanismo, caja y brazalete. Sin letra pequeña, sin sorpresas.
-                </div>
-            </div>
-            <div class="proof-card">
-                <div class="proof-icon">🚚</div>
-                <div class="proof-title">Envío 24/48h</div>
-                <div class="proof-text">
-                    Entrega asegurada con seguimiento en tiempo real. Gratis en pedidos superiores a 500€.
-                </div>
-            </div>
-        </div>
-
-        <p class="confidence-note">
-            "Más del 94% de nuestros clientes recomendaría AUREX a un colega o amigo."
-        </p>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         8) FAQ
-    ═══════════════════════════════════════ -->
-    <section id="faq">
-        <div class="section-label">❓ Preguntas frecuentes</div>
-        <h2 class="section-title">Resolvemos tus dudas</h2>
-        <p class="section-desc">
-            Todo lo que necesitas saber antes de tu compra. Si no encuentras tu respuesta, escríbenos.
-        </p>
-
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Es realmente resistente al agua?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Sí. El AUREX PRO 1 tiene una resistencia de 200 metros (20 ATM) con válvula de helio integrada. Es apto para buceo recreativo y profesional. La corona roscada y las juntas triples garantizan un sellado perfecto en cualquier condición.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Qué incluye la garantía de 5 años?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Cobertura completa del mecanismo, caja, brazalete y cristal. Incluye reparaciones por defectos de fabricación, ajuste de precisión y reemplazo de componentes. Válida internacionalmente en cualquier servicio técnico autorizado AUREX.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Cómo elijo mi talla de brazalete?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>El AUREX PRO 1 incluye dos segmentos de brazalete intercambiables (S/M y L) para muñecas de 15 a 21 cm. Si necesitas un tamaño especial, contacta con nosotros y te enviaremos el segmento adecuado sin coste adicional.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Cómo debo cuidar mi reloj?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Enjuaga con agua dulce tras contacto con sal o cloro. Evita golpes fuertes contra superficies duras. Recomendamos un servicio completo cada 3-5 años para mantener la precisión óptima. El titanio no requiere pulido como el acero.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Cuánto tarda el envío?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Envío en 24-48h laborables para España peninsular. Baleares y Canarias: 3-5 días. Todos los envíos incluyen seguro completo y seguimiento en tiempo real. Envío gratuito en pedidos superiores a 500€.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Puedo devolver el reloj si no me convence?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Por supuesto. Tienes 30 días naturales desde la recepción para devolver el reloj en condiciones originales. Te reembolsamos el importe completo en un plazo máximo de 5-7 días laborables.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿El mecanismo necesita mantenimiento especial?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>El calibre AX-01 está diseñado para un mantenimiento mínimo. Recomendamos un servicio cada 3-5 años para reemplazar juntas y lubricar el mecanismo. La reserva de 70h garantiza que el reloj siga funcionando aunque no lo lleves puesto un fin de semana.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    ¿Puedo usarlo para deportes de impacto?
-                    <span class="toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>El titanio grado 5 absorbe mejor los golpes que el acero, y el zafiro es prácticamente irrompible. Sin embargo, para deportes de alto impacto (motociclismo, escalada extrema), recomendamos retirar el reloj para preservar el mecanismo de precisión.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         9) CTA FINAL
-    ═══════════════════════════════════════ -->
-    <section class="final-cta" id="comprar">
-        <h2>Tu próximo nivel empieza aquí</h2>
+        <h3>Montaje y mantenimiento de sistemas y componentes informáticos</h3>
         <p>
-            No compras un reloj. Inviertes en un instrumento que te acompañará en cada desafío, en cada logro, en cada momento que defina quién eres. El AUREX PRO 1 no es para todos. Es para quienes lo dan todo.
+          Montaje de equipos, sustitución de componentes, diagnóstico de averías y
+          mantenimiento preventivo del hardware.
         </p>
-        <div class="price">2.890 €</div>
-        <a href="#" class="btn-primary">Comprar ahora</a>
-        <p class="legal-note">Los precios y disponibilidad pueden variar. IVA incluido. Envío gratuito península.</p>
-    </section>
+      </article>
 
-    <!-- ═══════════════════════════════════════
-         FOOTER
-    ═══════════════════════════════════════ -->
-    <footer>
-        <div class="footer-logo">AUREX<span>·</span>PRO</div>
-        <p>© 2026 AUREX Watches. Todos los derechos reservados. | Aviso legal | Privacidad | Cookies</p>
-    </footer>
+      <!-- Tarjeta 2 -->
+      <article class="skill-card reveal">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+            <line x1="13" y1="4" x2="11" y2="20"></line>
+          </svg>
+        </div>
+        <h3>Operaciones auxiliares para la configuración y la explotación</h3>
+        <p>
+          Configuración de puestos de trabajo, gestión de usuarios, copias de seguridad
+          y soporte al usuario en el día a día.
+        </p>
+      </article>
 
-    <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const toggle = button.querySelector('.toggle');
-                
-                // Cerrar todos
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
-                document.querySelectorAll('.faq-question .toggle').forEach(t => t.textContent = '+');
-                
-                // Abrir el clicado
-                if (!answer.classList.contains('active')) {
-                    answer.classList.add('active');
-                    toggle.textContent = '−';
-                }
-            });
-        });
+      <!-- Tarjeta 3 -->
+      <article class="skill-card reveal">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="2.5"></circle>
+            <path d="M4 4h4M16 4h4v4M4 20h4M16 20h4v-4"></path>
+            <path d="M4 8v8M20 8v8"></path>
+          </svg>
+        </div>
+        <h3>Instalación y mantenimiento de redes para transmisión de datos</h3>
+        <p>
+          Cableado estructurado, configuración de switches y routers, direccionamiento IP
+          y verificación de la conectividad.
+        </p>
+      </article>
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+      <!-- Tarjeta 4 -->
+      <article class="skill-card reveal">
+        <div class="skill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 5h18v14H3z"></path>
+            <path d="M3 9h18"></path>
+            <circle cx="6" cy="7" r=".6" fill="currentColor"></circle>
+            <path d="M8 15l2 2 4-5"></path>
+          </svg>
+        </div>
+        <h3>Instalación y configuración de sistemas operativos</h3>
+        <p>
+          Instalación de Windows y Linux, particionado de discos, controladores,
+          actualizaciones y resolución de incidencias del sistema.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     3. PORTFOLIO DE PROYECTOS
+     ============================================================ -->
+<section class="portfolio" id="proyectos">
+  <div class="container">
+
+    <div class="portfolio-head reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-subtitle">
+        Trabajos publicados y en curso. Cada uno con su código y su versión en línea.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PROYECTO 1: landing page comercial -->
+      <article class="project-card reveal">
+
+        <!-- Miniatura: SVG en línea que replica la vista de la landing.
+             Si prefieres una captura real, sustituye este bloque por:
+             <img src="img/landing-breitling.jpg" alt="Vista previa de la landing page"> -->
+        <div class="project-thumb">
+          <svg viewBox="0 0 640 360" role="img" aria-label="Vista previa de la landing page comercial">
+            <!-- barra del navegador -->
+            <rect x="0" y="0" width="640" height="34" fill="#0d1219"></rect>
+            <circle cx="22" cy="17" r="4" fill="#2a3342"></circle>
+            <circle cx="38" cy="17" r="4" fill="#2a3342"></circle>
+            <circle cx="54" cy="17" r="4" fill="#2a3342"></circle>
+            <rect x="76" y="9" width="300" height="16" rx="8" fill="#161d28"></rect>
+            <!-- esfera del reloj -->
+            <circle cx="470" cy="205" r="104" fill="none" stroke="#e02b20" stroke-width="2" opacity=".55"></circle>
+            <circle cx="470" cy="205" r="86" fill="#111722" stroke="#232c3a" stroke-width="10"></circle>
+            <circle cx="470" cy="205" r="70" fill="none" stroke="#e02b20" stroke-width="3" opacity=".9"></circle>
+            <line x1="470" y1="205" x2="470" y2="152" stroke="#e8ecf1" stroke-width="5" stroke-linecap="round"></line>
+            <line x1="470" y1="205" x2="506" y2="230" stroke="#e02b20" stroke-width="5" stroke-linecap="round"></line>
+            <circle cx="470" cy="205" r="6" fill="#e02b20"></circle>
+            <!-- texto de la landing -->
+            <rect x="46" y="112" width="210" height="12" rx="6" fill="#e02b20" opacity=".85"></rect>
+            <rect x="46" y="140" width="286" height="26" rx="6" fill="#e8ecf1" opacity=".9"></rect>
+            <rect x="46" y="176" width="238" height="26" rx="6" fill="#e8ecf1" opacity=".55"></rect>
+            <rect x="46" y="220" width="250" height="9" rx="4" fill="#8d99ab" opacity=".5"></rect>
+            <rect x="46" y="238" width="216" height="9" rx="4" fill="#8d99ab" opacity=".35"></rect>
+            <rect x="46" y="268" width="152" height="34" rx="17" fill="#e02b20"></rect>
+            <rect x="212" y="268" width="118" height="34" rx="17" fill="none" stroke="#3a4557" stroke-width="2"></rect>
+          </svg>
+        </div>
+
+        <div class="project-body">
+          <h3>Landing page comercial</h3>
+          <p>
+            Página de producto de una sola vista para un reloj de lujo: diseño oscuro,
+            tipografía limpia, estructura responsive y despliegue continuo en la nube.
+          </p>
+
+          <div class="tags">
+            <span class="tag">#HTML</span>
+            <span class="tag">#CSS</span>
+            <span class="tag">#IA</span>
+            <span class="tag">#Vercel</span>
+          </div>
+
+          <a href="https://breitling-endurance-pro.vercel.app/"
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener noreferrer">
+            Ver proyecto online
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Hueco reservado para el siguiente proyecto -->
+      <div class="project-placeholder reveal">
+        <div>
+          <strong>+</strong>
+          Próximo proyecto en preparación
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. FORMULARIO DE CONTACTO
+     ============================================================ -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-intro reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2 class="section-title">¿Hablamos de un empleo?</h2>
+        <p>
+          Cuéntame qué necesitas y te respondo lo antes posible. Puedes escribirme
+          también directamente por correo.
+        </p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+            <span><strong>Ander Salazar</strong></span>
+          </div>
+
+          <div class="contact-item">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m2 7 10 6 10-6"></path>
+              </svg>
+            </span>
+            <a href="mailto:ander.salazar09@somo.eus">ander.salazar09@somo.eus</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="formulario" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre"
+                 value="Ander" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email"
+                 value="ander.salazar09@somo.eus"
+                 placeholder="tu@correo.com" required>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje"
+                    placeholder="Cuéntame brevemente qué puesto o proyecto tienes en mente…"
+                    required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="justify-content:center;">
+          Enviar mensaje
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+
+        <!-- Confirmación visual tras el envío -->
+        <p class="form-note" id="notaFormulario" role="status" aria-live="polite">
+          ¡Gracias! Tu mensaje se ha preparado para el envío.
+        </p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">Ander <span>Salazar</span></div>
+
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="https://github.com/andersalazar09-creator"
+           target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.15v3.19c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+          </svg>
+          github.com/andersalazar09-creator
+        </a>
+        <span>&copy; <span id="anio">2026</span> Ander Salazar</span>
+      </nav>
+
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ============================================================
+   AÑO ACTUAL EN EL FOOTER
+   ============================================================ */
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+/* ============================================================
+   ANIMACIÓN DE ENTRADA AL HACER SCROLL
+   ============================================================ */
+const observador = new IntersectionObserver((entradas) => {
+  entradas.forEach((entrada) => {
+    if (entrada.isIntersecting) {
+      entrada.target.classList.add('visible');
+      observador.unobserve(entrada.target); // se anima una sola vez
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 4) * 90 + 'ms'; // efecto escalonado
+  observador.observe(el);
+});
+
+/* ============================================================
+   FORMULARIO DE CONTACTO
+   Abre el cliente de correo con los datos ya rellenados.
+   Si prefieres un envío real, cambia el action a tu servicio
+   (Formspree, Web3Forms, EmailJS…) y quita este bloque.
+   ============================================================ */
+const formulario = document.getElementById('formulario');
+const nota = document.getElementById('notaFormulario');
+
+formulario.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const nombre  = document.getElementById('nombre').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
+
+  if (!nombre || !email || !mensaje) {
+    nota.textContent = 'Por favor, rellena todos los campos antes de enviar.';
+    nota.classList.add('visible');
+    return;
+  }
+
+  // Abre el correo con asunto y cuerpo preparados
+  const asunto = encodeURIComponent('Contacto desde el portfolio — ' + nombre);
+  const cuerpo = encodeURIComponent(mensaje + '\n\n—\n' + nombre + '\n' + email);
+  window.location.href = 'mailto:ander.salazar09@somo.eus?subject=' + asunto + '&body=' + cuerpo;
+
+  nota.textContent = '¡Gracias, ' + nombre + '! Se ha abierto tu cliente de correo con el mensaje listo.';
+  nota.classList.add('visible');
+});
+</script>
 
 </body>
 </html>
